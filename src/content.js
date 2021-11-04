@@ -132,13 +132,13 @@ $(document).ready(function () {
                             },
                             async: false,
                             success: function (data) {
-                                var trList = $('tr', data).get();
-                                for (var i = 1; i < trList.length; i++) {
+                                var trhtmlList = $('tr', data).get();
+                                for (var i = 1; i < trhtmlList.length; i++) {
                                     try {
-                                        var deadline = trList[i].children[7].title;
+                                        var deadline = trhtmlList[i].children[7].title;
                                         if (today <= convertFromStringToDate(deadline)) {
-                                            var title = `[${courseName}] ` + $(trList[i]).find("div.subjt_top").text();
-                                            var Submit = trList[i].children[4].children[0].title;
+                                            var title = `[${courseName}] ` + $(trhtmlList[i]).find("div.subjt_top").text();
+                                            var Submit = trhtmlList[i].children[4].children[0].title;
                                             assignmentData.push([deadline,title,Submit,assignmentCrawling[courseName]]);
                                         }
                                     } catch (error) {
