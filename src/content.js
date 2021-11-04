@@ -195,15 +195,9 @@ $(document).ready(function () {
                     if (dDay === 0) {
                         dDay = "DAY";
                         color = "#FF0000";
-                    } else if (dDay <= 5) {
+                    } else {
                         color = "#FF0000";
-                    } else if (dDay <= 10) {
-                        color = "#9c9c9c";
-                    } else if (dDay <= 15) {
-                        color = "#9c9c9c";
-                    } else if (dDay <= 20) {
-                        color = "#9c9c9c";
-                    }
+                    } 
                     if (today <= convertFromStringToDate(deadline)) {
                         count += 1;
                         if (assignmentData[i][2] === '제출') {
