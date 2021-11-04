@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {
+	background-color: white;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 300;
+	word-break: keep-all;
+}
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 100px 1fr 1fr 1fr;
+}
+.button-color {
+	grid-column: span 1;
+	margin: 5px;
+}
+.button-select-department {
+	grid-column: span 1;
+	margin: 5px;
+}
+.options-notice {
+	grid-column: span 2;
+	margin: 5px;
+}
+.button-link {
+	margin: 5px;
+}
+button {
+	background-color: white;
+	border: 1px solid #b1b3b1;
+	border-radius: 3px 3px 3px 3px;
+	box-shadow: 2px 2px 2px #b1b3b1;
+	font-family: inherit;
+	height: 30px;
+	margin: 3px;
+	transition-duration: 0.3s;
+	width: 100px;
+}
+button:hover {
+	background-color: #b1b3b1;
+	color: white;
+}
+button:active {
+	background-color: #b1b3b1;
+	border: 0px;
+	color: white;
+	outline: 0px;
+}
+button:focus{
+	border: 1px solid #b1b3b1;
+	outline: 0px;
+}
+select{
+	background-color: white;
+	border: 1px solid #b1b3b1;
+	border-radius: 3px 3px 3px 3px;
+	box-shadow: 2px 2px 2px #b1b3b1;
+	font-family: inherit;
+	height: 30px;
+	margin: 3px;
+	width: 200px;
+}
+select:active {
+	background-color: white;
+	border: 1px solid #b1b3b1;
+}
+select:focus{
+	border: 1px solid #b1b3b1;
+	outline: 0px;
+}

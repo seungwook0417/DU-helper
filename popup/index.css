@@ -1,0 +1,81 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+
+.grid-container {
+    background-color: white;
+    font-family: 'Nanum Gothic';
+    font-weight: bold;
+	word-break: keep-all;
+    display: grid;
+	grid-template-columns: 100px 100px 100px;
+	grid-template-rows: 120px 120px 120px 60px;
+}
+
+
+.menu-button {
+	border-radius: 10%;
+	box-shadow: 3px 3px 3px #D2D2D2;
+	margin: 5px;
+    text-align: center;
+    border: 2px solid #ffffffff;
+}
+.menu-button:hover {
+	border: 2px solid #1d2475;
+}
+.menu-button > a {
+	color: black;
+	display: block;
+	height: 100%;
+	width: 100%;
+	text-decoration: none;
+}
+.menu-button > a > img {
+	height: 50px;
+	margin-top: 10px;
+	width: 50px;
+}
+.menu-button > a > p {
+    font-family: 'Nanum Gothic';
+	font-size: 14px;
+	margin: 10px;
+}
+
+
+.footer {
+	color: gray;
+    font-family: 'Nanum Gothic';
+	font-size: 10px;
+	font-weight: 100;
+	grid-column: span 3;
+	padding: 10px;
+	text-align: center;
+}
+.footer > div > a {
+	color: gray;
+	text-decoration: none;
+}
+
+#wrapper {
+	width: 200px !important;
+	display: flex;
+	flex-direction: column;
+  }
+
+button {
+	font-family: 'Nanum Gothic';
+	margin: 5px;
+	border: 2px solid #ffffffff;
+	border-radius: 6px;
+	box-shadow: 3px 3px 3px #D2D2D2;
+	background: white;
+	color: rgb(8, 107, 206);
+	font-size: 15px;
+	font-weight: 900;
+	padding: 0.3rem 0.6rem;
+	cursor: pointer;
+	height: 90%;
+}
+
+button:hover {
+	border: 2px solid #1d2475;
+}

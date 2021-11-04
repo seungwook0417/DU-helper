@@ -1,0 +1,275 @@
+{   
+    "나의 학과" : {
+        "URL" : "../options/options.html"
+    },
+    "자유전공학부" : {
+        "URL" : "http://udm.daegu.ac.kr"
+    },
+    "한국어교육학부" : {
+        "URL" : "http://koreandu.daegu.ac.kr/"
+    },
+    "글로벌언어문화학부(중국어중국학전공)" : {
+        "URL" : "http://chinese.daegu.ac.kr/"
+    },
+    "글로벌언어문화학부(일본어일본학과)" : {
+        "URL" : "http://japanese.daegu.ac.kr/"
+    },
+    "영어영문학과" : {
+        "URL" : "http://english.daegu.ac.kr/"
+    },
+    "문화예술학부(디지털문예창작전공 / 문화콘텐츠전공 / 공연예술전공)" : {
+        "URL" : "http://doca.daegu.ac.kr/"
+    },
+    "체육학과" : {
+        "URL" : "http://physical-education.daegu.ac.kr/"
+    },
+    "스포츠레저학과" : {
+        "URL" : "http://sportsleisure.daegu.ac.kr/"
+    },
+    "법학부" : {
+        "URL" : "https://law.daegu.ac.kr/"
+    },
+    "행정학과" : {
+        "URL" : "http://padep.daegu.ac.kr/"
+    },
+    "경찰학부(경찰행정학전공 / 자치경찰학전공)" : {
+        "URL" : "http://police.daegu.ac.kr/"
+    },
+    "부동산지적학과" : {
+        "URL" : "https://realty.daegu.ac.kr/hakgwa_home/realty/index.php"
+    },
+    "군사학과" : {
+        "URL" : "https://millitary-science.daegu.ac.kr/"
+    },
+    "경영학부(경영학전공)" : {
+        "URL" : "http://dubiz.daegu.ac.kr"
+    },
+    "경영학부(무역학전공)" : {
+        "URL" : "http://trade.daegu.ac.kr"
+    },
+    "경영학부(회계학전공)" : {
+        "URL" : "http://acta.daegu.ac.kr"
+    },
+    "경영학부(경제학전공)" : {
+        "URL" : "http://economics.daegu.ac.kr"
+    },
+    "경영학부(금융보험전공)" : {
+        "URL" : "http://bogum.daegu.ac.kr"
+    },  
+    "호텔관광경영학부(호텔관광전공)" : {
+        "URL" : "http://hotel.daegu.ac.kr"
+    }, 
+    "호텔관광경영학부(관광경영전공)" : {
+        "URL" : "http://tourismmanage.daegu.ac.kr"
+    }, 
+    "사회복지학과" : {
+        "URL" : "http://dsw.daegu.ac.kr"
+    },
+    "청소년상담복지학과" : {
+        "URL" : "http://sanbok.daegu.ac.kr"
+    },
+    "아동가정복지학과" : {
+        "URL" : "http://familywelfare.daegu.ac.kr"
+    },
+    "지역사회개발·복지학과" : {
+        "URL" : "http://cdwelfare.daegu.ac.kr"
+    },
+    "국제관계학과" : {
+        "URL" : "http://international.daegu.ac.kr"
+    },
+    "사회학과" : {
+        "URL" : "http://sociology.daegu.ac.kr"
+    },
+    "미디어커뮤니케이션학과" : {
+        "URL" : "http://comm.daegu.ac.kr"
+    },
+    "문헌정보학과" : {
+        "URL" : "http://lis.daegu.ac.kr/"
+    },
+    "심리학과" : {
+        "URL" : "http://psychology.daegu.ac.kr/"
+    },
+    "빅데이터학과" : {
+        "URL" : "http://stat.daegu.ac.kr/"
+    },
+    "화학생명과학부(나노화학전공)" : {
+        "URL" : "http://chemistry.daegu.ac.kr/"
+    },
+    "화학생명과학부(생명과학전공)" : {
+        "URL" : "http://bio.daegu.ac.kr/"
+    },
+    "화학생명과학부(원예학전공)" : {
+        "URL" : "http://horticulture.daegu.ac.kr/"
+    },
+    "화학생명과학부(바이오산업학전공)" : {
+        "URL" : "http://bioind.daegu.ac.kr/"
+    },
+    "동물자원학과" : {
+        "URL" : "http://animal.daegu.ac.kr/"
+    },
+    "산림자원학과" : {
+        "URL" : "http://forest.daegu.ac.kr/"
+    },
+    "반려동물산업학과" : {
+        "URL" : "http://pets.daegu.ac.kr/"
+    },
+    "건축공학과" : {
+        "URL" : "http://arch.daegu.ac.kr/"
+    },
+    "건설시스템공학과" : {
+        "URL" : "http://civileng.daegu.ac.kr/"
+    },
+    "환경기술공학과" : {
+        "URL" : "http://enveng.daegu.ac.kr/"
+    },
+    "기계학부(기계공학전공)" : {
+        "URL" : "http://mechanical.daegu.ac.kr/"
+    },
+    "기계학부(기계설계공학전공)" : {
+        "URL" : "http://mechadesign.daegu.ac.kr/"
+    },
+    "기계학부(기계자동차공학전공)" : {
+        "URL" : "http://mechadesign.daegu.ac.kr/"
+    },
+    "식품공학과" : {
+        "URL" : "http://foodengr.daegu.ac.kr/"
+    },
+    "식품영양학과" : {
+        "URL" : "http://fn.daegu.ac.kr/"
+    },
+    "생명공학과" : {
+        "URL" : "http://biotech.daegu.ac.kr/"
+    },
+    "화학공학과" : {
+        "URL" : "http://cheers.daegu.ac.kr/"
+    },
+    "조경학과" : {
+        "URL" : "http://landscape.daegu.ac.kr"
+    },
+    "신소재에너지시스템공학부(신소재에너지공학전공)" : {
+        "URL" : "http://mese.daegu.ac.kr"
+    },
+    "신소재에너지시스템공학부(에너지시스템공학전공)" : {
+        "URL" : "http://energy.daegu.ac.kr"
+    },
+    "전자전기공학부(전자공학전공)" : {
+        "URL" : "http://ee.daegu.ac.kr"
+    },
+    "전자전기공학부(전기공학전공)" : {
+        "URL" : "http://econtrol.daegu.ac.kr"
+    },
+    "전자전기공학부(정보통신공학전공)" : {
+        "URL" : "http://ict.daegu.ac.kr"
+    },
+    "컴퓨터정보공학부(컴퓨터공학전공)" : {
+        "URL" : "http://ce.daegu.ac.kr"
+    },
+    "컴퓨터정보공학부(컴퓨터소프트웨어전공)" : {
+        "URL" : "http://sw.daegu.ac.kr"
+    },
+    "컴퓨터정보공학부(정보보호전공)" : {
+        "URL" : "http://infosec.daegu.ac.kr"
+    },
+    "융합예술학부(아트앤디자인전공)" : {
+        "URL" : "https://dufineart.cafe24.com/"
+    },
+    "융합예술학부(영상애니메이션디자인학과)" : {
+        "URL" : "http://www.dgani.co.kr/"
+    },
+    "융합예술학부(생활조형디자인학과)" : {
+        "URL" : "http://pad.daegu.ac.kr"
+    },
+    "시각디자인융합학부(시각디자인전공)" : {
+        "URL" : "http://visual.daegu.ac.kr"
+    },
+    "시각디자인융합학부(서비스디자인전공)" : {
+        "URL" : "http://servicedesign.daegu.ac.kr"
+    },
+    "산업디자인학과" : {
+        "URL" : "none"
+    },
+    "패션디자인학과" : {
+        "URL" : "http://dfd.daegu.ac.kr/"
+    },
+    "실내건축디자인학과" : {
+        "URL" : "http://dhid.daegu.ac.kr/"
+    },
+    "국어교육과" : {
+        "URL" : "http://koredu.daegu.ac.kr/"
+    },
+    "영어교육과" : {
+        "URL" : "http://engedu.daegu.ac.kr/"
+    },
+    "역사교육과" : {
+        "URL" : "http://hisedu.daegu.ac.kr/"
+    },
+    "일반사회교육과" : {
+        "URL" : "http://socialstudies.daegu.ac.kr/"
+    },
+    "지리교육과" : {
+        "URL" : "http://geoedu.daegu.ac.kr/"
+    },
+    "유아교육과" : {
+        "URL" : "http://kidedu.daegu.ac.kr/"
+    },
+    "특수교육과" : {
+        "URL" : "http://se.daegu.ac.kr/"
+    },
+    "초등특수교육과" : {
+        "URL" : "http://specialcho.daegu.ac.kr/"
+    },
+    "유아특수교육과" : {
+        "URL" : "http://ecse.daegu.ac.kr/"
+    },
+    "수학교육과" : {
+        "URL" : "http://mathedu.daegu.ac.kr"
+    },
+    "물리교육과" : {
+        "URL" : "http://physed.daegu.ac.kr"
+    },
+    "화학교육과" : {
+        "URL" : "http://h2o.daegu.ac.kr"
+    },
+    "생물교육과" : {
+        "URL" : "http://bioedu.daegu.ac.kr"
+    },
+    "지구과학교육과" : {
+        "URL" : "http://earth.daegu.ac.kr"
+    },
+    "직업재활학과" : {
+        "URL" : "http://jobrh.daegu.ac.kr"
+    },
+    "언어치료학과" : {
+        "URL" : "http://daeguslp.daegu.ac.kr"
+    },
+    "재활심리학과" : {
+        "URL" : "http://jaesim.daegu.ac.kr"
+    },
+    "재활공학과" : {
+        "URL" : "http://rst.daegu.ac.kr"
+    },
+    "물리치료학과" : {
+        "URL" : "http://lovept.daegu.ac.kr"
+    },
+    "작업치료학과" : {
+        "URL" : "http://duot.daegu.ac.kr"
+    },
+    "재활건강증진학과" : {
+        "URL" : "http://rehab-health.daegu.ac.kr"
+    },
+    "간호학과" : {
+        "URL" : "http://nursing.daegu.ac.kr"
+    },
+    "AI학부(AI소프트웨어전공,AI엔터테인먼트전공)" : {
+        "URL" : "http://ai.daegu.ac.kr"
+    },
+    "실버복지상담학전공" : {
+        "URL" : "http://swc.daegu.ac.kr"
+    },
+    "자산관리・6차산업학전공" : {
+        "URL" : "http://startup.daegu.ac.kr"
+    },
+    "평생교육·청소년학전공" : {
+        "URL" : "http://lle.daegu.ac.kr"
+    }
+}

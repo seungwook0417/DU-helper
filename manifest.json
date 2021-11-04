@@ -1,0 +1,43 @@
+{
+    "manifest_version": 2,
+    "name": "대구대다",
+    "version": "1.3.2",
+    "description": "대구대학교 재학생들이 필요한 크롬 확장프로그램입니다.",
+    "options_page": "options/options.html",
+    "web_accessible_resources": ["data/page.json", "data/schedule.json"],
+    "browser_action": {
+        "browser_style": true,
+        "default_popup": "./popup/index.html",
+        "default_icon": "./image/logo/main-icon-32.png",
+        "show_matches": [
+            "*://lms.daegu.ac.kr/ilos/st/course/online_view_form.acl?*","*://lms.daegu.ac.kr/ilos/st/course/online_view_form.acl"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://lms.daegu.ac.kr/ilos/st/course/online_view_form.acl?*","*://lms.daegu.ac.kr/ilos/st/course/online_view_form.acl", "*://lms.daegu.ac.kr/*"
+            ],
+            "js": [
+                "src/jquery.min.js", "src/content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "downloads",
+        "activeTab",
+        "storage", 
+        "https://fonts.googleapis.com/earlyaccess/notosanskr.css"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+      },
+    "icons": {
+        "32": "./image/logo/main-icon-32.png",
+        "16": "./image/logo/main-icon-32.png",
+        "48": "./image/logo/main-icon-32.png",
+        "128": "./image/logo/main-icon-32.png"
+    }
+}

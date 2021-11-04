@@ -1,0 +1,114 @@
+{
+    "홈페이지" : {
+        "IMG" : "../image/icons/img_daegu.png",
+        "URL" : "https://daegu.ac.kr/main"
+    },
+    "타이거즈" : {
+        "IMG" : "../image/icons/img_tigers.png",
+        "URL" : "https://tigersstd.daegu.ac.kr/"
+    },
+    "포털" : {
+        "IMG" : "../image/icons/img_potal.png",
+        "URL" : "https://portal.daegu.ac.kr/"
+    },
+    "Smart LMS" : {
+        "IMG" : "../image/icons/img_lms.png",
+        "URL" : "https://lms.daegu.ac.kr/"
+    },
+    "수강신청" : {
+        "IMG" : "../image/icons/img_sugang.png",
+        "URL" : "https://sugang.daegu.ac.kr/"
+    },
+    "메일" : {
+        "IMG" : "../image/icons/img_mail.png",
+        "URL" : "https://outlook.office.com/mail/inbox"
+    },
+    "에브리타임" : {
+        "IMG" : "../image/icons/img_everytime.png",
+        "URL" : "https://everytime.kr/"
+    },
+    "무들" : {
+        "IMG" : "../image/icons/img_pe.png",
+        "URL" : "http://pe.daegu.ac.kr"
+    },
+    "비교과" : {
+        "IMG" : "../image/icons/img_heart.png",
+        "URL" : "http://heart.daegu.ac.kr"
+    },
+    "기숙사" : {
+        "IMG" : "../image/icons/img_dormitory.png",
+        "URL" : "https://dorm.daegu.ac.kr/hakgwa_home/dorm/index.php"
+    },
+    "DBpia" : {
+        "IMG" : "../image/icons/img_dbPia.png",
+        "URL" : "http://libproxy.daegu.ac.kr/_Lib_Proxy_Url/http://www.dbpia.co.kr"
+    },
+    "전자출결" : {
+        "IMG" : "../image/icons/img_attend.png",
+        "URL" : "http://attend.daegu.ac.kr"
+    },
+    "K-MOOC" : {
+        "IMG" : "../image/icons/img_k_mooc.png",
+        "URL" : "http://www.kmooc.kr/school/DGUk/"
+    },
+    "DU-MOOC" : {
+        "IMG" : "../image/icons/img_dumooc.png",
+        "URL" : "https://mooc.daegu.ac.kr/catalogs/main"
+    },
+    "창파도서관" : {
+        "IMG" : "../image/icons/img_lib.png",
+        "URL" : "https://lib.daegu.ac.kr/"
+    },
+    "ALL_in_Care" : {
+        "IMG" : "../image/icons/img_allin.png",
+        "URL" : "https://job.daegu.ac.kr/mainindex.do"
+    },
+    "LINC+사업단" : {
+        "IMG" : "../image/icons/img_link.png",
+        "URL" : "https://lincplus.daegu.ac.kr/"
+    },
+    "ACE+사업단" : {
+        "IMG" : "../image/icons/img_ace.png",
+        "URL" : "https://ace.daegu.ac.kr/ace/main"
+    },
+    "창업지원단" : {
+        "IMG" : "../image/icons/img_dustartup.png",
+        "URL" : "https://dustartup.daegu.ac.kr/front/index.php?"
+    },
+    "증명서발급" : {
+        "IMG" : "../image/icons/img_daegu.png",
+        "URL" : "https://daegu.certpia.com/"
+    },
+    "두드림" : {
+        "IMG" : "../image/icons/img_dudream.png",
+        "URL" : "http://dudream.daegu.ac.kr/"
+    },
+    "학사일정" : {
+        "IMG" : "../image/icons/img_schedule.png",
+        "URL" : "https://daegu.ac.kr/schedule/detail?schedule_info_seq=1"
+    },
+    "사이트맵" : {
+        "IMG" : "../image/icons/img_map.png",
+        "URL" : "https://daegu.ac.kr/customer/sitemap/detail"
+    },
+    "교내전화번호" : {
+        "IMG" : "../image/icons/img_call.png",
+        "URL" : "https://daegu.ac.kr/customer/emp/detail"
+    },
+    "학사공지" : {
+        "IMG" : "../image/icons/img_noti.png",
+        "URL" : "https://daegu.ac.kr/article/DG159/list"
+    },
+    "입학안내" : {
+        "IMG" : "../image/icons/img_ipsi.png",
+        "URL" : "https://ipsi.daegu.ac.kr/html/kr/"
+    },
+    "카카오_챗봇" : {
+        "IMG" : "../image/icons/img_bot.png",
+        "URL" : "https://pf.kakao.com/_CqHaK/chat"
+    },
+    "나의 학과" : {
+        "IMG" : "../image/icons/img_my.png",
+        "URL" : "../options/options.html"
+    }
+}
