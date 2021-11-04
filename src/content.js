@@ -42,7 +42,7 @@ function nextLecture() {
 }
 
 // 수강과목 들어가기
-function eclass(KJKEY) {
+function enter_eclass(KJKEY) {
     $.ajax({
         url: "/ilos/st/course/eclass_room2.acl",
         type: "POST",
@@ -117,7 +117,7 @@ $(document).ready(function () {
                     var assignmentData = new Array;
 
                     for (var courseName in assignmentCrawling) {
-                        eclass(assignmentCrawling[courseName]);
+                        enter_eclass(assignmentCrawling[courseName]);
                         // 수강과목 과제 가져오기
                         $.ajax({
                             url: "/ilos/st/course/report_list.acl",
@@ -222,7 +222,6 @@ $(document).ready(function () {
                     </table>
                 `;
                 $('div#newAssignment').html(assignmentHtml);
-
                 $('div.icon-box').before(`
                 <div class="gnb-top-class" id="active_button" return false;"></div>
                 `);
