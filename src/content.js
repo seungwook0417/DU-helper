@@ -167,7 +167,7 @@ $(document).ready(function () {
                             <span style="color:#aaa;font-weight:400;">
                                 새로운 과제를 불러오거나 제출 현황을 업데이트하기 위해서는 갱신이 필요합니다.
                             </span>
-                            <span id="refreshButtonContentLayer" style="color:green;margin-left:7px;line-height:150%;cursor:pointer;">
+                            <span id="refreshButton" style="color:green;margin-left:7px;line-height:150%;cursor:pointer;">
                                 갱신하기
                             </span>
                         </div>
@@ -215,7 +215,7 @@ $(document).ready(function () {
                         <tr class="" style="cursor:pointer;" onclick="eclassRoom1('${assignmentData[i][3]}','/ilos/st/course/report_list_form.acl')">
                             <td style="padding:5px 10px; width:50%; color:black">${assignmentData[i][1]}</td>
                             <td style="padding:5px 10px; width:30%; color:black">${assignmentData[i][0].substr(5)}<span style="color:#ccc;margin:0 5px;font-weight:300;">|</span><span style="color:${color};">${"D-"+dDay}</span></td>
-                            <td style="padding:5px 10px; width:20%; color:${ifSubmitStyleColor}" class="ifSubmit">${assignmentData[i][2]}</td>
+                            <td style="padding:5px 10px; width:20%; color:${ifSubmitStyleColor}" class="">${assignmentData[i][2]}</td>
                         </tr>
                         `;
                     }
@@ -277,7 +277,7 @@ $(document).ready(function () {
 
 });
 
-$(document).on('click','#refreshButtonContentLayer',function(){
+$(document).on('click','#refreshButton',function(){
     chrome.storage.local.remove('assignmentData',function(){
         location.reload();
     });
