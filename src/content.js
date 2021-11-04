@@ -187,11 +187,11 @@ $(document).ready(function () {
                             </tr>
                         </thead>
                 `;
+                var count = 0;
                 for (let i = 0; i < assignmentData.length; i++) {
                     var deadline = assignmentData[i][0];
                     var dDay = getDDay(deadline);
                     var color;
-                    var count = 0;
                     if (dDay === 0) {
                         dDay = "DAY";
                         color = "#FF0000";
