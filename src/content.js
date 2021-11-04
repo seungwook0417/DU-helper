@@ -111,11 +111,8 @@ $(document).ready(function () {
             chrome.storage.local.get(function (data) {
                 let today = new Date();
                 var assignmentData = data.assignmentData;
-
                 if (!assignmentData) {
-
                     var assignmentData = new Array;
-
                     for (var courseName in assignmentCrawling) {
                         enter_eclass(assignmentCrawling[courseName]);
                         // 수강과목 과제 가져오기
@@ -208,7 +205,7 @@ $(document).ready(function () {
                         assignmentHtml += `
                         <tr class="" style="cursor:pointer;" onclick="eclassRoom1('${assignmentData[i][3]}','/ilos/st/course/report_list_form.acl')">
                             <td style="padding:5px 10px; width:50%; color:black">${assignmentData[i][1]}</td>
-                            <td style="padding:5px 10px; width:30%; color:black">${assignmentData[i][0].substr(5)}<span style="color:#ccc;margin:0 5px;font-weight:300;">|</span><span style="color:${color};">${"D-"+dDay}</span></td>
+                            <td style="padding:5px 10px; width:30%; color:black">${assignmentData[i][0].substr(5)}<span style="color:#ccc;margin:0 5px;font-weight:300;"></span><span style="color:${color};">[${"D-"+dDay}]</span></td>
                             <td style="padding:5px 10px; width:20%; color:${ifSubmitStyleColor}" class="">${assignmentData[i][2]}</td>
                         </tr>
                         `;
