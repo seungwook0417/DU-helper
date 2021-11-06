@@ -179,11 +179,11 @@ $(document).ready(function () {
                         if (recommend != current){
                             progressHtml += `
                             <tr class="" style="cursor:pointer;" onclick="eclassRoom('${_KJKEY}')">
-                                <td rowspan="2" style="color:black">${title}</td>
-                                <td style="color:black">권장진도율 : <span style="color:green";>${recommend}</span></td>
+                                <td rowspan="2" style="text-align: center; color:black;">${title}</td>
+                                <td style="text-align: center; olor:black;">권장진도율 : <span style="color:green";>${recommend}</span></td>
                             </tr>
                             <tr class="" style="cursor:pointer;" onclick="eclassRoom('${_KJKEY}')">
-                                <td style="color:black">나의진도율 : <span style="color:red";>${current}</span></td>
+                                <td style="text-align: center; color:black;">나의진도율 : <span style="color:red";>${current}</span></td>
                             </tr>
                             `;
                             $('div#newprogress').html(progressHtml);
@@ -258,7 +258,15 @@ $(document).ready(function () {
             }
 
             if (jQuery.isEmptyObject(temp_progress)) {
-                progressHtml +='<tr><td colspan="4" height="30" class="last">조회할 자료가 없습니다</td></tr>';
+                progressHtml +=`
+                <tr>
+                    <td rowspan="2" style="text-align: center; color:black;">전체 수강과목</td>
+                    <td style="text-align: center; color:black;">권장진도율 : <span style="color:black";>100%</span></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center; color:black;">나의진도율 : <span style="color:green";>100%</span></td>
+                </tr>
+                `;
             }
 
             assignmentHtml += `
