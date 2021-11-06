@@ -191,6 +191,7 @@ $(document).ready(function () {
                             temp_progress[title] = _KJKEY
                         }
                         
+                        
                     }
                 });
                 
