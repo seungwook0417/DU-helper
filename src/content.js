@@ -273,10 +273,32 @@ $(document).ready(function () {
             let css = '<style>.vjs-fullscreen-control{display:block !important;}video{outline:none;}</style>';
             $(head).append(css);
         });
-    } else {
+
+    } else if (urlHost === 'lms.daegu.ac.kr' && urlPathname === '/ilos/st/course/lecture_material_list_form.acl') {
+        chrome.storage.sync.get(`Active`, function(data) {
+            let Active = data[`Active`];
+            if (Active === "True"){
+                var all_download_Html = '   <div id="all_download" class="btntype">전체 다운로드</div>'
+                $('div.btntype').after(all_download_Html);
+            }
+            
+        })
+    }else {
         return true;
     }
 
+});
+
+$(document).on('click','#all_download',function(){
+    var materiallist = document.querySelectorAll('td.center.impt.impt_off');
+    var KJ = document.querySelectorAll('input#KJ_KEY');
+    var KJ_value = KJ[0].getAttribute('value');
+    console.log(KJ_value)
+
+    for (let i = 0; i < materiallist.length; i++) {
+        var impt_seq = materiallist[i].getAttribute('impt_seq');
+        window.open('https://lms.daegu.ac.kr/ilos/pf/course/lecture_material_list_zip_download2.acl?CONTENT_SEQ='+impt_seq+'&ky='+KJ_value+'&ud=&pf_st_flag=2')
+    }
 });
 
 $(document).on('click','#refreshButton',function(){
