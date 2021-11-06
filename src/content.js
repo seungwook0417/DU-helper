@@ -111,48 +111,6 @@ $(document).ready(function () {
             chrome.storage.local.get(function (data) {
                 let today = new Date();
                 var assignmentData = data.assignmentData;
-                if (!assignmentData) {
-                    var assignmentData = new Array;
-                    for (var courseName in assignmentCrawling) {
-                        enter_eclass(assignmentCrawling[courseName]);
-                        // 수강과목 과제 가져오기
-                        $.ajax({
-                            url: "/ilos/st/course/report_list.acl",
-                            type: "POST",
-                            data: {
-                                start: "",
-                                display: "1",
-                                SCH_VALUE: "",
-                                ud: "",
-                                ky: "",
-                                encoding: "utf-8"
-                            },
-                            async: false,
-                            success: function (data) {
-                                var trhtmlList = $('tr', data).get();
-                                for (var i = 1; i < trhtmlList.length; i++) {
-                                    try {
-                                        var deadline = trhtmlList[i].children[7].title;
-                                        if (today <= convertFromStringToDate(deadline)) {
-                                            var title = `[${courseName}] ` + $(trhtmlList[i]).find("div.subjt_top").text();
-                                            var Submit = trhtmlList[i].children[4].children[0].title;
-                                            assignmentData.push([deadline,title,Submit,assignmentCrawling[courseName]]);
-                                        }
-                                    } catch (error) {
-                                        continue;
-                                    }
-                                    
-                                }
-                            }
-                        });
-                        
-                    }
-                    assignmentData.sort();
-
-                    chrome.storage.local.set({
-                        assignmentData: assignmentData
-                    });
-                }
 
                 var assignmentHtml = `
                     <div class="title-01">
@@ -184,37 +142,91 @@ $(document).ready(function () {
                             </tr>
                         </thead>
                 `;
-                var count = 0;
-                for (let i = 0; i < assignmentData.length; i++) {
-                    var deadline = assignmentData[i][0];
-                    var dDay = getDDay(deadline);
-                    var color;
-                    if (dDay === 0) {
-                        dDay = "DAY";
-                        color = "#FF0000";
-                    } else {
-                        color = "#FF0000";
-                    } 
-                    if (today <= convertFromStringToDate(deadline)) {
-                        count += 1;
-                        if (assignmentData[i][2] === '제출') {
-                            var ifSubmitStyleColor = 'green';
-                        } else if (assignmentData[i][2] === '미제출') {
-                            var ifSubmitStyleColor = '#FF0000';
-                        }
-                        assignmentHtml += `
-                        <tr class="" style="cursor:pointer;" onclick="eclassRoom1('${assignmentData[i][3]}','/ilos/st/course/report_list_form.acl')">
-                            <td style="padding:5px 10px; width:50%; color:black">${assignmentData[i][1]}</td>
-                            <td style="padding:5px 10px; width:30%; color:black">${assignmentData[i][0].substr(5)}<span style="color:#ccc;margin:0 5px;font-weight:300;"></span><span style="color:${color};">[${"D-"+dDay}]</span></td>
-                            <td style="padding:5px 10px; width:20%; color:${ifSubmitStyleColor}" class="">${assignmentData[i][2]}</td>
-                        </tr>
-                        `;
-                    }
-                }
-                if (count == 0){
-                    assignmentHtml +='<tr><td colspan="4" height="30" class="last">조회할 자료가 없습니다</td></tr>';
-                }
 
+                if (!assignmentData) {
+                    var assignmentData = new Array;
+                    for (var courseName in assignmentCrawling) {
+                        enter_eclass(assignmentCrawling[courseName]);
+                        // 수강과목 과제 가져오기
+                        $.ajax({
+                            url: "/ilos/st/course/report_list.acl",
+                            type: "POST",
+                            data: {
+                                start: "",
+                                display: "1",
+                                SCH_VALUE: "",
+                                ud: "",
+                                ky: "",
+                                encoding: "utf-8"
+                            },
+                            async: false,
+                            success: function (data) {
+                                var trhtmlList = $('tr', data).get();
+                                for (var i = 1; i < trhtmlList.length; i++) {
+                                    try {
+                                        var deadline = trhtmlList[i].children[7].title;
+                                        if (today <= convertFromStringToDate(deadline)) {
+                                            var title = `[${courseName}] ` + $(trhtmlList[i]).find("div.subjt_top").text();
+                                            var Submit = trhtmlList[i].children[4].children[0].title;
+                                            var dDay = getDDay(deadline);
+                                            var dDay_color;
+                                            if (dDay === 0) {
+                                                dDay = "DAY";
+                                                dDay_color = "#FF0000";
+                                            } else {
+                                                dDay_color = "#FF0000";
+                                            } 
+                                            if (Submit === '제출') {
+                                                var Submit_color = 'green';
+                                            } else if (Submit === '미제출') {
+                                                var Submit_color = '#FF0000';
+                                            }
+                                            assignmentHtml += `
+                                            <tr class="" style="cursor:pointer;" onclick="eclassRoom1('${assignmentCrawling[courseName]}','/ilos/st/course/report_list_form.acl')">
+                                                <td style="color:black">${title}</td>
+                                                <td style="color:black">${deadline}<span style="color:${dDay_color};"> [${"D-"+dDay}]</span></td>
+                                                <td style="color:${Submit_color}" class="">${Submit}</td>
+                                            </tr>
+                                            `;
+                                            
+                                            assignmentData.push([deadline,title,Submit,dDay,dDay_color, Submit_color,assignmentCrawling[courseName]]);
+                                        }
+                                        
+                                    } catch (error) {
+                                        continue;
+                                    }
+                                    
+                                }
+                                
+                            }
+                        });
+                        
+                    }
+                    assignmentData.sort();
+
+                    if (assignmentData.length == 0){
+                        assignmentHtml +='<tr><td colspan="4" height="30" class="last">조회할 자료가 없습니다</td></tr>';
+                    }
+
+                    chrome.storage.local.set({
+                        assignmentData: assignmentData
+                    });
+                }else{
+                    if(!assignmentData.length == 0){
+                        for (let i = 0; i < assignmentData.length; i++) {
+                            assignmentHtml += `
+                                                <tr class="" style="cursor:pointer;" onclick="eclassRoom1('${assignmentData[i][6]}','/ilos/st/course/report_list_form.acl')">
+                                                    <td style="color:black">${assignmentData[i][1]}</td>
+                                                    <td style="color:black">${assignmentData[i][0]}<span style="color:${assignmentData[i][4]};"> [${"D-"+assignmentData[i][3]}]</span></td>
+                                                    <td style="color:${assignmentData[i][5]}" class="">${assignmentData[i][2]}</td>
+                                                </tr>
+                                                `;
+                        }
+                    }else{
+                        assignmentHtml +='<tr><td colspan="4" height="30" class="last">조회할 자료가 없습니다</td></tr>';
+                    }
+                    
+                }
                 assignmentHtml += `
                     </table>
                 `;
