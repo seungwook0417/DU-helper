@@ -169,6 +169,7 @@ $(document).ready(function () {
                         var title = locationmap[0].children[3].textContent;
                         var online_progress = $('#content_text', data).get();
                         var test = online_progress[0].children[3]
+                        var _KJKEY = online_progress[0].children[2].children[2].value
                         var tbody_progress = test.querySelector('tbody');
                         var progress_rate  = tbody_progress.querySelectorAll('div');
 
@@ -177,18 +178,29 @@ $(document).ready(function () {
 
                         if (recommend != current){
                             progressHtml += `
-                            <tr class="" style="cursor:pointer;" onclick="eclassRoom1('${assignmentCrawling[courseName]}','/ilos/st/course/online_list_form.acl')">
+                            <tr class="" style="cursor:pointer;" onclick="eclassRoom('${_KJKEY}')">
                                 <td rowspan="2" style="color:black">${title}</td>
                                 <td style="color:black">권장진도율 : <span style="color:green";>${recommend}</span></td>
                             </tr>
-                            <tr>
+                            <tr class="" style="cursor:pointer;" onclick="eclassRoom('${_KJKEY}')">
                                 <td style="color:black">나의진도율 : <span style="color:red";>${current}</span></td>
                             </tr>
                             `;
                             $('div#newprogress').html(progressHtml);
 
-                            temp_progress[title] = assignmentCrawling[courseName]
+                            temp_progress[title] = _KJKEY
                         }
+                        progressHtml += `
+                            <tr class="" style="cursor:pointer;" onclick="eclassRoom('${_KJKEY}')">
+                                <td rowspan="2" style="color:black">${title}</td>
+                                <td style="color:black">권장진도율 : <span style="color:green";>${recommend}</span></td>
+                            </tr>
+                            <tr class="" style="cursor:pointer;" onclick="eclassRoom('${_KJKEY}')">
+                                <td style="color:black">나의진도율 : <span style="color:red";>${current}</span></td>
+                            </tr>
+                            `;
+                            $('div#newprogress').html(progressHtml);
+
                         
                     }
                 });
