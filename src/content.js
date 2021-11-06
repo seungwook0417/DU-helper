@@ -190,17 +190,6 @@ $(document).ready(function () {
 
                             temp_progress[title] = _KJKEY
                         }
-                        progressHtml += `
-                            <tr class="" style="cursor:pointer;" onclick="eclassRoom('${_KJKEY}')">
-                                <td rowspan="2" style="color:black">${title}</td>
-                                <td style="color:black">권장진도율 : <span style="color:green";>${recommend}</span></td>
-                            </tr>
-                            <tr class="" style="cursor:pointer;" onclick="eclassRoom('${_KJKEY}')">
-                                <td style="color:black">나의진도율 : <span style="color:red";>${current}</span></td>
-                            </tr>
-                            `;
-                            $('div#newprogress').html(progressHtml);
-
                         
                     }
                 });
