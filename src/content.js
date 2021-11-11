@@ -188,7 +188,8 @@ $(document).ready(function () {
                             `;
                             $('div#newprogress').html(progressHtml);
 
-                            temp_progress[title] = _KJKEY
+                            temp_progress += 1;
+                            console.log(temp_progress)
                         }
                         
                         
@@ -239,6 +240,7 @@ $(document).ready(function () {
                                     </tr>
                                     `;
                                     temp_assignment[title] = assignmentCrawling[courseName]
+                                    $('div#newprogress').html(progressHtml);
                                     
                                 }
                                 
@@ -258,7 +260,9 @@ $(document).ready(function () {
                 assignmentHtml +='<tr><td colspan="4" height="30" class="last">조회할 자료가 없습니다</td></tr>';
             }
 
-            if (jQuery.isEmptyObject(temp_progress)) {
+            console.log(temp_progress)
+
+            if (jQuery.isEmptyObject(temp_assignment)) {
                 progressHtml +=`
                 <tr>
                     <td rowspan="2" style="text-align: center; color:black;">전체 수강과목</td>
