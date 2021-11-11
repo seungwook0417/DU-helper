@@ -63,6 +63,27 @@ function enter_eclass(KJKEY) {
     });
 }
 
+
+function main_schedule_setting() {
+    $.ajax({
+        url: "/ilos/main/main_schedule_setting.acl",
+        type: "POST",
+        data: {
+            FIRST_MAIN : "1",
+            encoding : "utf-8"
+        },
+        async: false,
+        success: function (data) {
+            if (data.isError) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    });
+}
+
+
 function convertFromStringToDate(responseDate) {
     let dateComponents = responseDate.split(' ');
     let datePieces = dateComponents[0].split(".");
@@ -90,7 +111,7 @@ $(document).ready(function () {
     var urlHost = window.location.host;
     var urlPathname = window.location.pathname;
     if (urlHost === 'lms.daegu.ac.kr'  && urlPathname === '/ilos/main/main_form.acl') {
-
+        main_schedule_setting()
         var assignmentCrawling = new Object;
         var eclassRoomArray = document.querySelectorAll('em.sub_open');
         for (let i = 0; i < eclassRoomArray.length; i++) {
@@ -180,16 +201,15 @@ $(document).ready(function () {
                             progressHtml += `
                             <tr class="" style="cursor:pointer;" onclick="eclassRoom('${_KJKEY}')">
                                 <td rowspan="2" style="text-align: center; color:black;">${title}</td>
-                                <td style="text-align: center; olor:black;">권장진도율 : <span style="color:green";>${recommend}</span></td>
+                                <td style="color:black;">  권장진도율 : <span style="color:green";>${recommend}</span></td>
                             </tr>
                             <tr class="" style="cursor:pointer;" onclick="eclassRoom('${_KJKEY}')">
-                                <td style="text-align: center; color:black;">나의진도율 : <span style="color:red";>${current}</span></td>
+                                <td style="color:black;">  나의진도율 : <span style="color:red";>${current}</span></td>
                             </tr>
                             `;
                             $('div#newprogress').html(progressHtml);
 
-                            temp_progress += 1;
-                            console.log(temp_progress)
+                            temp_progress[title] += _KJKEY
                         }
                         
                         
@@ -260,7 +280,6 @@ $(document).ready(function () {
                 assignmentHtml +='<tr><td colspan="4" height="30" class="last">조회할 자료가 없습니다</td></tr>';
             }
 
-            console.log(temp_progress)
 
             if (jQuery.isEmptyObject(temp_assignment)) {
                 progressHtml +=`
